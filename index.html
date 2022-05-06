@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator With JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form name="calcu" class="calculator">
+            <input type="text" readonly class="value" name="txt"/>
+            <span class="num clear" onclick="calcu.txt.value = ''">c</span>
+            <span class="num" onclick="document.calcu.txt.value += '/'">/</span>
+            <span class="num" onclick="document.calcu.txt.value += '*'">X</span>
+            <span class="num" onclick="document.calcu.txt.value += '7'">7</span>
+            <span class="num" onclick="document.calcu.txt.value += '8'">8</span>
+            <span class="num" onclick="document.calcu.txt.value += '9'">9</span>
+            <span class="num" onclick="document.calcu.txt.value += '-'">-</span>
+            <span class="num" onclick="document.calcu.txt.value += '4'">4</span>
+            <span class="num" onclick="document.calcu.txt.value += '5'">5</span>
+            <span class="num" onclick="document.calcu.txt.value += '6'">6</span>
+            <span class="num plus" onclick="document.calcu.txt.value += '+'">+</span>
+            <span class="num" onclick="document.calcu.txt.value += '1'">1</span>
+            <span class="num" onclick="document.calcu.txt.value += '2'">2</span>
+            <span class="num" onclick="document.calcu.txt.value += '3'">3</span>
+            <span class="num" onclick="document.calcu.txt.value += '0'">0</span>
+            <span class="num" onclick="document.calcu.txt.value += '00'">00</span>
+            <span class="num" onclick="document.calcu.txt.value += '.'">.</span>
+            <span class="num equal" onclick="document.calcu.txt.value = eval(calcu.txt.value)">=</span>
+        </form>
+    </div>
+
+    <!-- <script type="text/javascript" src="vanilla-tilt.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"
+        integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
+</body>
+</html>
